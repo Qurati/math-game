@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Линейная функция и её графики</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Линейная функция и её графики</h1>
+            <p>Изучаем линейные функции в интерактивной форме</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <h2>Основы линейных функций</h2>
+            <p>Линейная функция — это функция вида <span class="formula">y = kx + b</span>, где:</p>
+            <ul>
+                <li><span class="formula">k</span> — угловой коэффициент (определяет наклон прямой)</li>
+                <li><span class="formula">b</span> — свободный член (точка пересечения с осью Y)</li>
+            </ul>
+            <p>Графиком линейной функции всегда является прямая линия. Чем больше <span class="formula">k</span> по модулю, тем круче наклон прямой.</p>
+        </div>
+        
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Лёгкий уровень</button>
+            <button class="difficulty-btn" data-difficulty="medium">Средний уровень</button>
+            <button class="difficulty-btn" data-difficulty="hard">Сложный уровень</button>
+        </div>
+        
+        <div class="game-area">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+            
+            <div id="tasks-container"></div>
+            
+            <div class="navigation">
+                <button class="nav-btn" id="prev-btn" disabled>← Назад</button>
+                <button class="nav-btn" id="next-btn" disabled>Далее →</button>
+                <button class="finish-btn" id="finish-btn" style="display: none;">Завершить тест</button>
+            </div>
+        </div>
+        
+        <div class="results" id="results">
+            <h2>Ваши результаты</h2>
+            <p>Количество правильных ответов:</p>
+            <div class="score" id="score">0/0</div>
+            <p id="result-message"></p>
+            <button class="restart-btn" id="restart-btn">Пройти тест ещё раз</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
